@@ -1,0 +1,9 @@
+{
+  "name": "BookUI",
+  "description": "UI for displaying book service",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~4.13.1"
+  }
+}

@@ -1,0 +1,8 @@
+---
+applications:
+- name: BookUI
+  memory: 128M
+  buildpack: nodejs_buildpack
+  command:  node app.js
+env:
+    node_env: cloud
