@@ -15,13 +15,14 @@ app.use('/', express.static(path.join(__dirname, '/')))
 
 app.get('/books', function (req, res) {
 
-	request({'url':'https://bookservice.run.aws-usw02-pr.ice.predix.io/books',
-        'proxy':'http://sjc1intproxy01.crd.ge.com:8080'}, function (error, response, body) {
+	request({'url':'https://bookservice.run.aws-usw02-pr.ice.predix.io/books'}, function (error, response, body) {
         if (!error && response.statusCode == 200) {
     		res.send(body);    
     	}
+    	else{
+    		res.send(err);
+    	}
 	})
-	
 })
 
 

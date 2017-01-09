@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="/mainController.js"></script>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="/mainController.js"></script>
+</head>
+
 <body>
-
-
 <div ng-app="BookUI">
 	<div ng-controller="BookList">
-		<ul>
-			<li ng-repeat="book in books">
-				{{book.title}}
-			</li>
-		</ul>
+		<table class="table">
+		    <thead>
+		      <tr>
+		        <th>Title</th>
+		        <th>Author</th>
+		        <th>ISBN</th>
+		        <th>Published</th>
+		        <th>Genre</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr ng-repeat="book in books">
+		        <td>{{book.title}} </td>
+		        <td>{{book.author}} </td>
+		        <td>{{book.isbn}} </td>
+		        <td>{{book.published}} </td>
+		        <td>{{book.genre}} </td>
+		      </tr>
+		    </tbody>
+  		</table>
 	</div>
 </div>
 
