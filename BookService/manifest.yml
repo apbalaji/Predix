@@ -1,0 +1,13 @@
+---
+applications:
+  - name: BookService
+    buildpack: java_buildpack
+    path: target/demo-0.0.1-SNAPSHOT.jar
+    memory: 512M
+    timeout: 120
+services:
+   - bp-postgres
+   - bp-logstash
+env:
+    # NOTE: Some values in curly braces are updated by scripts
+    SPRING_PROFILES_ACTIVE : cloud
