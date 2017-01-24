@@ -1,8 +1,14 @@
 ---
 applications:
-- name: BookUI
+- name: BookBP
   memory: 128M
   buildpack: nodejs_buildpack
   command:  node app.js
+services:
+   - balajip-secure-uaa-instance
+   - bp-logstash
 env:
     node_env: cloud
+    uaa_service_label: predix-uaa
+    clientId: balaji_app
+    base64ClientCredential: YXBwdXNlcl90czpBWEc0OWhSUCE=

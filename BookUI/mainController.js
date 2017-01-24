@@ -11,6 +11,7 @@ app.service('bookSvc', function($http) {
 });
 
 app.controller('BookList', function($scope, bookSvc) {
+	$scope.books = {};
     bookSvc.getBooks(function(data){
     		$scope.books = data._embedded.books;
     })
